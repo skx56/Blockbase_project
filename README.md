@@ -1,153 +1,54 @@
-# On-Chain Expense Tracker DApp
+# Blockbase
 
-A decentralized application (DApp) for tracking and splitting expenses among users, built on the Ethereum blockchain. This project allows users to register, add expenses, and settle debts in a transparent and immutable way.
+<p align="center">
+<img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge" />
+  <img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge" />
+  <img alt="Solidity" src="https://img.shields.io/badge/Solidity-363636?style=for-the-badge" />
+  <img alt="Ethers" src="https://img.shields.io/badge/Ethers-2535A0?style=for-the-badge" />
+</p>
 
-## Application Screenshots and Features Demonstration
+<p align="center">
+  <strong>A decentralized file storage and access-control application combining a React interface with smart-contract based permission logic.</strong>
+</p>
 
-### 1. Main Interface and Currency Conversion
-![Main Interface](screenshots/main-interface.png)
+Blockbase explores how encrypted files, blockchain-based ownership, and access permissions can work together in a user-facing application. The project includes a Solidity contract and a React frontend for interacting with decentralized storage workflows.
 
-This screenshot demonstrates the main interface of the application with the following features:
-- Connected wallet address: 0x8b55C4a7f7d7E88dF063dd0FA0f938D280cd6509
-- ETH/INR currency conversion toggle button
-- Current ETH to INR exchange rate display (1 ETH = ₹139,138)
-- Welcome message with user's registered name
-- Total registered users counter
-- "Get My Registered Name" functionality
-- Add Expense and Refresh Expenses options
+## Core Capabilities
 
-### 2. Smart Contract Transaction
-![Transaction Details](screenshots/transaction-details.png)
+- Provides a React interface for decentralized file workflows.
+- Implements Solidity contract logic for access control.
+- Uses ethers for blockchain interaction from the frontend.
+- Frames a secure upload and permission-management model.
 
-This screenshot shows a successful transaction on the Sepolia testnet:
-- Transaction Hash: 0xcf7ad467fc117ff652cfd849b724c23b02ca2eb5c57987ab333ccf36831ec2b9
-- Status: Success with 2 Block Confirmations
-- Block: 8163206
-- Contract Interaction: Method call to the expense tracker contract
-- Gas Usage and Transaction Details
-- Timestamp: Apr-21-2025 04:45:48 AM UTC
+## Technical Architecture
 
-### 3. Expense Management
-![Expense Management](screenshots/expense-management.png)
+The application uses a Create React App frontend with smart contract code stored alongside the client source. The frontend interacts with contract logic through ethers and organizes the user workflow around file storage and permission management.
 
-The expense management interface shows:
-- New expense creation form titled "New Expense"
-- Sample expense entry "shopping"
-- Multiple participant entries with:
-  - Wallet addresses
-  - Amount paid
-  - Amount owed
-  - Remove participant option
-- Add Participant and Save Expense buttons
-- People section showing registered users and their balances
+## Technology Stack
 
-### 4. Expense History
-![Expense History](screenshots/expense-history.png)
+- React and JavaScript for frontend delivery.
+- Solidity smart contract for access-control logic.
+- ethers for blockchain provider and contract interaction.
+- OpenZeppelin contracts for smart contract foundations.
+- React testing utilities from the standard frontend toolchain.
 
-The expense history view displays:
-1. Travel Expense:
-   - Date: 4/21/2025, 9:52:36 AM
-   - Participant: Saksham Ojha
-   - Paid: 3232.0 ETH (₹449694016.00)
-   - Owes: 595.0 ETH (₹82787110.00)
+## Repository Structure
 
-2. Shopping Expense:
-   - Date: 4/21/2025, 10:15:48 AM
-   - Multiple participants
-   - Each entry showing:
-     - Paid: 12.0 ETH (₹1669656.00)
-     - Owes: 8.0 ETH (₹1113104.00)
-
-These screenshots demonstrate the complete functionality of the expense tracker DApp, showcasing its ability to handle wallet connections, expense management, transaction processing, and dual-currency display features.
-
-## Features
-
-### Core Features
-1. **User Registration**
-   - Register with your Ethereum wallet
-   - Set your display name
-   - View registration status
-
-2. **Expense Management**
-   - Add new expenses with multiple participants
-   - Track who paid and who owes
-   - View expense history
-   - See detailed breakdown of each expense
-
-3. **Balance Tracking**
-   - View net balances for all users
-   - Track who owes whom
-   - Color-coded display (red for debts, green for credits)
-
-### Enhanced Features
-
-1. **User Information Display**
-   - View connected wallet address
-   - Check registration status
-   - Get your registered name
-   - See total number of registered users
-   - View last expense label
-
-2. **Currency Conversion**
-   - Toggle between ETH and INR display
-   - Real-time ETH/INR price updates
-   - Automatic price refresh every 5 minutes
-   - Clear display of amounts in both currencies
-
-3. **Smart Contract Features**
-   - Check if a user is registered
-   - Get total number of registered users
-   - Get label of the last expense
-   - Get your own registered name
-   - View detailed expense information
-
-## Technical Details
-
-### Smart Contract
-- Written in Solidity
-- Deployed on Ethereum network
-- Contract Address: `0x1B2bc323feB1e1B0ba347573724c234A1c7ef8b9`
-
-### Frontend
-- Built with React.js
-- Uses ethers.js for blockchain interaction
-- Real-time price updates from CoinGecko API
-- Responsive UI with clear data visualization
+- `src/App.js` - Frontend application shell.
+- `src/BlockBase.sol` - Smart contract implementation.
+- `src/index.js` - React entry point.
+- `package.json` - Frontend scripts and blockchain dependencies.
 
 ## Getting Started
 
-1. **Prerequisites**
-   - MetaMask or similar Ethereum wallet
-   - Node.js and npm installed
-   - Ethereum testnet (Sepolia) configured in wallet
+```bash
+npm install
+```
 
-2. **Installation**
-   ```bash
-   npm install
-   npm start
-   ```
+```bash
+npm start
+```
 
-3. **Usage**
-   - Connect your Ethereum wallet
-   - Register with your name
-   - Start adding expenses
-   - View balances and settle debts
-   - Toggle between ETH and INR display
+## Professional Context
 
-## Development
-
-### Project Structure
-- `src/BlockBase.sol`: Smart contract code
-- `src/App.js`: Main React application
-- `src/ExpenseTrackerABI.json`: Contract ABI
-
-### Available Scripts
-- `npm start`: Runs the app in development mode
-- `npm test`: Launches the test runner
-- `npm run build`: Builds the app for production
-
-## Contributing
-Feel free to submit issues and enhancement requests!
-
-## License
-This project is licensed under the MIT License.
+This project demonstrates decentralized application development, smart-contract interaction, and secure permission-oriented product design.
