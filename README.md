@@ -24,6 +24,19 @@ Blockbase explores how encrypted files, blockchain-based ownership, and access p
 
 The application uses a Create React App frontend with smart contract code stored alongside the client source. The frontend interacts with contract logic through ethers and organizes the user workflow around file storage and permission management.
 
+## Architecture Diagram
+
+```mermaid
+flowchart LR
+  User["DApp User"] --> ReactApp["React Interface"]
+  ReactApp --> Wallet["Wallet Provider"]
+  Wallet --> Contract["BlockBase Solidity Contract"]
+  ReactApp --> Storage["Encrypted File Storage Flow"]
+  Contract --> Permissions["Access Permissions"]
+  Permissions --> ReactApp
+  Storage --> ReactApp
+```
+
 ## Technology Stack
 
 - React and JavaScript for frontend delivery.
