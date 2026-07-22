@@ -27,7 +27,8 @@ The application uses a Create React App frontend with smart contract code stored
 ## Architecture Diagram
 
 ```mermaid
-flowchart LR
+%%{init: {"flowchart": {"nodeSpacing": 55, "rankSpacing": 70, "curve": "basis"}, "themeVariables": {"fontSize": "16px", "fontFamily": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"}}}%%
+flowchart TD
   User["DApp User"] --> ReactApp["React Interface"]
   ReactApp --> Wallet["Wallet Provider"]
   Wallet --> Contract["BlockBase Solidity Contract"]
@@ -36,15 +37,15 @@ flowchart LR
   Permissions --> ReactApp
   Storage --> ReactApp
 
-  classDef inputs fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2px;
-  classDef process fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2px;
-  classDef data fill:#CCFBF1,stroke:#0D9488,color:#134E4A,stroke-width:2px;
-  classDef agent fill:#FCE7F3,stroke:#DB2777,color:#831843,stroke-width:2px;
-  classDef output fill:#FEF9C3,stroke:#CA8A04,color:#713F12,stroke-width:2px;
+  classDef inputs fill:#E0F2FE,stroke:#0284C7,color:#0C4A6E,stroke-width:2.5px;
+  classDef process fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2.5px;
+  classDef data fill:#CCFBF1,stroke:#0D9488,color:#134E4A,stroke-width:2.5px;
+  classDef agent fill:#FCE7F3,stroke:#DB2777,color:#831843,stroke-width:2.5px;
+  classDef output fill:#FEF9C3,stroke:#CA8A04,color:#713F12,stroke-width:2.5px;
   class User inputs;
   class ReactApp,Wallet,Contract process;
   class Storage,Permissions data;
-  linkStyle default stroke:#475569,stroke-width:2px;
+  linkStyle default stroke:#475569,stroke-width:2.5px;
 ```
 
 ## Technology Stack
